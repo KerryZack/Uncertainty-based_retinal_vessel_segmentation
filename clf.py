@@ -47,7 +47,7 @@ def predict(image_path):
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     # 创建Uncertainty network并加载权重
-    pretrained_dict = torch.load('./checkpoint/checkpoint_chasefcn67.pth' )
+    pretrained_dict = torch.load('./checkpoint/checkpoint_chasefcn67.pth' ,map_location=device)
     fcn = tiramisu.FCDenseNet67(n_classes=1).to(device)
     model_dict = fcn.state_dict()
     pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
@@ -55,7 +55,7 @@ def predict(image_path):
     fcn.load_state_dict(model_dict)
 
     # 创建Segmentation network并加载权重
-    sg_pretrained_dict = torch.load("./checkpoint/checkpoint_unetmean.pth" )
+    sg_pretrained_dict = torch.load("./checkpoint/checkpoint_unetmean.pth",map_location=device )
     Sg_model = stdunet.build_unet(n_channels=3, n_classes=1).to(device)
     # sgmodel_dict = Sg_model.state_dict()
     # sg_pretrained_dict = {k: v for k, v in sg_pretrained_dict.items() if k in sgmodel_dict}
