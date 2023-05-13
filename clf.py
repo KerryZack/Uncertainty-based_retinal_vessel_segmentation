@@ -55,7 +55,7 @@ def predict(image_path):
     fcn.load_state_dict(model_dict)
 
     # 创建Segmentation network并加载权重
-    sg_pretrained_dict = torch.load("./checkpoint/checkpoint_unetmean.pth",map_location=device )
+    sg_pretrained_dict = torch.load("./checkpoint/checkpoint.pth",map_location=device )
     Sg_model = stdunet.build_unet(n_channels=3, n_classes=1).to(device)
     # sgmodel_dict = Sg_model.state_dict()
     # sg_pretrained_dict = {k: v for k, v in sg_pretrained_dict.items() if k in sgmodel_dict}
