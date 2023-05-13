@@ -1,3 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-checkpoint/checkpoint_unetmean.pth filter=lfs diff=lfs merge=lfs -text
+checkpoint_unetmean.pth filter=lfs diff=lfs merge=lfs -text
+.pth filter=lfs diff=lfs merge=lfs -text
+checkpoint.pth filter=lfs diff=lfs merge=lfs -text
