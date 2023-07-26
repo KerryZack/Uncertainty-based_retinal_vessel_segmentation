@@ -20,4 +20,9 @@ streamlit run app.py
 ## 部署
 请参看streamlit官方说明，此代码的环境是python3.7，同样需要在streamlit cloud创建中选择好python版本 https://docs.streamlit.io/
 
+## 部署效果
+![image](https://github.com/KerryZack/Uncertainty-based_retinal_vessel_segmentation/assets/99378600/aa9772be-24a7-4764-8a06-c6717dbc36fb)
+
+![image](https://github.com/KerryZack/Uncertainty-based_retinal_vessel_segmentation/assets/99378600/13d74b8b-11ad-4998-b69d-688f633ef85e)
+
 
