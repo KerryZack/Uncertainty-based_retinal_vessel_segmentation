@@ -25,4 +25,5 @@ streamlit run app.py
 
 ![image](https://github.com/KerryZack/Uncertainty-based_retinal_vessel_segmentation/assets/99378600/13d74b8b-11ad-4998-b69d-688f633ef85e)
 
-
+## 系统说明
+上图中左侧是上传的原始图像，模型推理计算后将显示不确定性图（中间的图）和分割结果（右图）。不确定性图及系统对于分割结果高度不确定性的区域，需要进一步细化诊断。
